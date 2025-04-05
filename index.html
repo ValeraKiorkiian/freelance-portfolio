@@ -24,9 +24,9 @@
     />
     <!-- External CSS -->
     <script type="module" crossorigin src="/freelance-portfolio/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/freelance-portfolio/assets/vendor-C8Dfw3ui.js">
-    <link rel="stylesheet" crossorigin href="/freelance-portfolio/assets/vendor-pvxkJjp9.css">
-    <link rel="stylesheet" crossorigin href="/freelance-portfolio/assets/index-CG8fYVP3.css">
+    <link rel="modulepreload" crossorigin href="/freelance-portfolio/assets/vendor-DSc29gAB.js">
+    <link rel="stylesheet" crossorigin href="/freelance-portfolio/assets/vendor-C7Njb_ko.css">
+    <link rel="stylesheet" crossorigin href="/freelance-portfolio/assets/index-CmqyWar7.css">
   </head>
   <body>
     <section class="header">
@@ -42,7 +42,7 @@
           alt="logo"
         />
         <svg class="header-icon" width="84" height="19">
-          <use href="/freelance-portfolio/assets/sprite-z37GiM1H.svg#icon-jefferson"></use>
+          <use href="/freelance-portfolio/assets/sprite-DqeNBsw7.svg#icon-jefferson"></use>
         </svg>
       </a>
       <div class="nav-wrapper">
@@ -140,9 +140,136 @@
   </div>
 </section>
 
-      <section class="about-me">
+      <section id="about-me" class="about-me">
   <div class="container">
-    <h2 class="about-me-title">About Me</h2>
+    <h2 class="visually-hidden">About me</h2>
+    <div class="about-wrapper">
+      <div class="about-left">
+        <p class="about-txt">
+          I work with people all over the world to create impressive and
+          <span class="about-r-span">functional </span
+          ><span class="about-g-span">websites</span> that reflect each client's
+          unique personality.
+        </p>
+      </div>
+      <div class="about-right">
+        <div class="thumb">
+          <picture>
+            <!--Destkop -->
+            <source
+              media="(min-width: 1440px)"
+              srcset="../img/desktop/aboutMe-desktop-1x.webp 1x, ../img/desktop/aboutMe-desktop-2x.webp 2x"
+            />
+            <!--tablet -->
+            <source
+              media="(min-width: 768px)"
+              srcset="../img/tablet/aboutMe-tablet-1x.webp 1x, ../img/tablet/aboutMe-tablet-2x.webp 2x"
+            />
+            <!--mobile -->
+            <source
+              media="(max-width: 767px)"
+              srcset="../img/mobile/aboutMe-mobile-1x.webp 1x, ../img/mobile/aboutMe-mobile-2x.webp 2x"
+            />
+            <img
+              class="img-about"
+              src="../img/desktop/aboutMe-desktop-1x.webp"
+              alt="about-me"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+    <ul class="accordion-container">
+      <li class="ac active">
+        <h3 class="ac-header">
+          <button type="button" class="ac-trigger">
+            about-me<span class="icon-span"
+              ><svg class="icon-accordion" width="18" height="18">
+                <use xlink:href="../img/sprite.svg#icon-arrow-down"></use>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="ac-panel">
+          <p class="ac-text">
+            I am Lloyd Jefferson, a talented programmer with extensive expertise
+            in software development. I have an understanding of different
+            programming languages and technologies, always ready to improve my
+            skills. I always follow the latest trends and look for
+            unconventional, creative solutions to problems. I have a high level
+            of analytical skills and am able to effectively solve even the most
+            difficult tasks encountered on the way.
+          </p>
+          <p class="ac-text">
+            Able to work both independently and in a team. I can effectively
+            cooperate with colleagues, exchanging ideas and finding optimal
+            solutions. Professional maturity allows you to calmly cope with
+            challenges and stressful situations, while maintaining a high
+            quality of work. I am always looking for opportunities for
+            self-improvement. I actively study new technologies and practices to
+            stay abreast of the latest innovations. I have a strong
+            understanding of various programming languages, frameworks and
+            architectural concepts that allow me to create efficient and
+            scalable software.
+          </p>
+        </div>
+      </li>
+      <li class="ac">
+        <h3 class="ac-header">
+          <button type="button" class="ac-trigger">
+            about-me<span class="icon-span"
+              ><svg class="icon-accordion" width="18" height="18">
+                <use xlink:href="../img/sprite.svg#icon-arrow-down"></use>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="ac-panel">
+          <p class="ac-text">Frontend development</p>
+          <p class="ac-text">HeadlessCMS,Wordpress</p>
+          <p class="ac-text">Blender(enjoy)</p>
+        </div>
+      </li>
+      <li class="ac">
+        <h3 class="ac-header">
+          <button type="button" class="ac-trigger">education</button>
+        </h3>
+        <div class="ac-panel">
+          <p class="ac-text">
+            2018 - 2019 / Frontend Development Diploma, GoIT IT
+            School,&nbsp;New&nbsp;York
+          </p>
+          <p class="ac-text">
+            2019 - 2020 / Advanced Web Development Certificate, GoIT IT School,
+            New York
+          </p>
+          <p class="ac-text">
+            2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+          </p>
+        </div>
+      </li>
+    </ul>
+    <div class="container-swiper">
+      <div class="swiper">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">HTML/CSS</li>
+          <li class="swiper-slide">JavaScript</li>
+          <li class="swiper-slide">React</li>
+          <li class="swiper-slide">Node.js</li>
+          <li class="swiper-slide">React Native</li>
+          <li class="swiper-slide">Soft skills</li>
+        </ul>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- If we need navigation buttons 
+            <div class="swiper-button-prev"></div>-->
+      <div class="swiper-button-next">
+        <svg class="icon-next" width="40" height="40">
+          <use xlink:href="../img/sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -167,7 +294,7 @@
           <h3 class="ac-header">
             <button type="button" class="ac-trigger open-btn">
               <svg class="faq-icon" width="34" height="34">
-                <use href="/freelance-portfolio/assets/sprite-z37GiM1H.svg#icon-arrow-down"></use>
+                <use href="/freelance-portfolio/assets/sprite-DqeNBsw7.svg#icon-arrow-down"></use>
               </svg>
               What programming languages are most often used in your project?
             </button>
@@ -185,7 +312,7 @@
           <h3 class="ac-header">
             <button type="button" class="ac-trigger open-btn">
               <svg class="faq-icon" width="34" height="34">
-                <use href="/freelance-portfolio/assets/sprite-z37GiM1H.svg#icon-arrow-down"></use>
+                <use href="/freelance-portfolio/assets/sprite-DqeNBsw7.svg#icon-arrow-down"></use>
               </svg>
               What are the deadlines for the&nbsp;project?
             </button>
@@ -205,7 +332,7 @@
           <h3 class="ac-header">
             <button type="button" class="ac-trigger open-btn">
               <svg class="faq-icon" width="34" height="34">
-                <use href="/freelance-portfolio/assets/sprite-z37GiM1H.svg#icon-arrow-down"></use>
+                <use href="/freelance-portfolio/assets/sprite-DqeNBsw7.svg#icon-arrow-down"></use>
               </svg>
               What payment methods do you accept?
             </button>
@@ -223,7 +350,7 @@
           <h3 class="ac-header">
             <button type="button" class="ac-trigger open-btn">
               <svg class="faq-icon" width="34" height="34">
-                <use href="/freelance-portfolio/assets/sprite-z37GiM1H.svg#icon-arrow-down"></use>
+                <use href="/freelance-portfolio/assets/sprite-DqeNBsw7.svg#icon-arrow-down"></use>
               </svg>
               How can I contact you?
             </button>
@@ -241,7 +368,7 @@
           <h3 class="ac-header">
             <button type="button" class="ac-trigger open-btn">
               <svg class="faq-icon" width="34" height="34">
-                <use href="/freelance-portfolio/assets/sprite-z37GiM1H.svg#icon-arrow-down"></use>
+                <use href="/freelance-portfolio/assets/sprite-DqeNBsw7.svg#icon-arrow-down"></use>
               </svg>
               Do you provide advice or support?
             </button>
@@ -261,7 +388,7 @@
           <h3 class="ac-header">
             <button type="button" class="ac-trigger open-btn">
               <svg class="faq-icon" width="34" height="34">
-                <use href="/freelance-portfolio/assets/sprite-z37GiM1H.svg#icon-arrow-down"></use>
+                <use href="/freelance-portfolio/assets/sprite-DqeNBsw7.svg#icon-arrow-down"></use>
               </svg>
               What does the process of developing a software
               <br />like from idea to implementation?
@@ -304,7 +431,7 @@
   <div class="container burger-container">
     <button class="burger-button-close js-close-menu">
       <svg class="burger-icon" width="32" height="32">
-        <use href="/freelance-portfolio/assets/sprite-z37GiM1H.svg#icon-close"></use>
+        <use href="/freelance-portfolio/assets/sprite-DqeNBsw7.svg#icon-close"></use>
       </svg>
     </button>
     <nav class="burger-nav">
