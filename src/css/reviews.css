@@ -73,6 +73,23 @@ button.swiper-review {
 .swiper-btn-prev:hover,
 .swiper-btn-next:hover {
   background-color: transparent;
+  border-color: var(--green-hover);
+}
+
+.swiper-btn-prev:hover svg,
+.swiper-btn-next:hover svg {
+  --color1: var(--green-hover);
+}
+
+.swiper-btn-prev:active,
+.swiper-btn-next:active {
+  background-color: transparent;
+  border-color: var(--green-hover);
+}
+
+.swiper-btn-prev:active svg,
+.swiper-btn-next:active svg {
+  --color1: var(--green);
 }
 
 .swiper-btn-prev {
@@ -84,6 +101,12 @@ button.swiper-review {
   border: 1px solid rgba(250, 250, 250, 0.2);
   stroke: #3b3b3b;
 }
+
+.swiper-btn-prev:disabled svg,
+.swiper-btn-next:disabled svg {
+  --color1: #3b3b3b;
+}
+
 
 @media (min-width: 768px) {
   .review-left,
