@@ -1,8 +1,4 @@
-.projects {
-}
 
-.projects-container {
-}
 
 .projects-title {
   text-transform: uppercase;
@@ -10,29 +6,7 @@
   margin-bottom: 32px;
 }
 
-/* .swiper-container {
-    width: 100%;
-    height: auto;
-    /* position: relative; */
-/* } */
 
-/* .swiper-wrapper {} */
-
-/* .projects-swiper-slide {
-    opacity: 0;
-
-    visibility: hidden;
-
-    transition: opacity 0.3s ease;
-
-} */
-
-/* .projects-swiper-slide-active {
-    opacity: 1;
-
-    visibility: visible;
-
-} */
 
 .projects-items {
   list-style: none;
@@ -40,10 +14,7 @@
 }
 
 .projects-item {
-  /* margin: 10px 0; */
   font-size: 16px;
-  /* border-radius: 24px; */
-  /* min-width: 343px; */
   height: auto;
 
   justify-content: space-between;
@@ -104,7 +75,6 @@
 }
 
 .projects-img-container {
-  /* margin: 0 auto; */
   padding: 100px 16px;
   background: var(--cards);
   border-bottom-right-radius: 24px;
@@ -123,17 +93,17 @@
   height: 52px;
 }
 
-/* .swiper-button-prev {}
-
-.swiper-button-next {} */
 .projects-navigation {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
-.icon-prev {
-  transform: rotate(180deg);
+.icon-prev,
+.icon-forward {
   --color1: currentColor;
+}
+.icon-prev {
+transform: rotate(180deg);
 }
 
 .projects-navigation-btn {
@@ -183,8 +153,6 @@
 
   .projects-img-container {
     padding: 120px 45px;
-    /* border-bottom-right-radius: 24px;
-    border-bottom-left-radius: 24px; */
   }
 
   .projects-item {
@@ -203,9 +171,7 @@
   .projects.section {
     padding-bottom: 82px;
   }
-  /* .swiper-slide {
-        display: flex;
-    } */
+  
   .projects-technologies {
     margin-bottom: 223px;
   }
@@ -218,7 +184,7 @@
   .projects-technologies-container {
     padding: 64px;
     background: var(--white);
-
+    width: 688px;
     border-top-right-radius: 0;
     border-bottom-left-radius: 24px;
   }
@@ -232,9 +198,12 @@
     border-bottom-left-radius: 0;
     border-bottom-left-radius: 0;
   }
+  .projects-img-container {
+    width: 688px;
+  }
 }
 
-/* .swiper-button-disabled {
-    opacity: 0.5;
-    pointer-events: none;
-} */
+
+ .swiper-container {
+    z-index: 0 !important;
+ }
