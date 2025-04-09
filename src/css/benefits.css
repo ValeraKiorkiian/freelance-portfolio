@@ -57,6 +57,7 @@
   text-transform: uppercase; */
   color: rgba(250, 250, 250, 0.4);
 }
+
 @media only screen and (min-width: 1440px) {
   .benefits-title {
     max-width: 284px;
@@ -159,3 +160,7 @@
   box-shadow: 0 0 20px rgba(250, 250, 250, 0.4);
   background-color: var(--green-hover);
 }
+
+/* #region Animation */
+
+/* #endregion Animation*/
