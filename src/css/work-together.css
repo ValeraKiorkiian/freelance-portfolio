@@ -323,7 +323,7 @@ textarea.invalid {
 
   .container-work {
     max-width: 768px;
-    padding-top: 80px;
+    padding-top: 88px;
   }
 
   .title-work {
@@ -413,6 +413,7 @@ textarea.invalid {
 @media only screen and (min-width: 1440px) {
   .container-work {
     max-width: 1440px;
+    padding-top: 0;
   }
   .title-work {
     max-width: 542px;
