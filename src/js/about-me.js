@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loop: true,
     navigation: {
       nextEl: '.about-button-next',
-      prevEl: '.about-button-prev',
     },
     keyboard: {
       enabled: true,
