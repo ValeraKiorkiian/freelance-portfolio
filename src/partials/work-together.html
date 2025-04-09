@@ -1,16 +1,30 @@
-<section class="work-together section">
-  <div class="container-work">
+<section class="work-together">
+  <div class="work-together container">
     <div class="title-work">
-      <div class="logo-wrapper">
-        <img src="/public/logo.svg" alt="image" />
-      </div>
+      <picture class="logo-wrapper">
+        <source
+          srcset="
+            public/work-together-image@1x.jpg,
+            public/work-together-image@1x.jpg
+          "
+          type="public"
+        />
+        <source
+          srcset="
+            public/work-together-image@1x.jpg,
+            public/work-together-image@1x.jpg
+          "
+          type="public"
+        />
+        <img src="/public/work-together-image@2x.jpg" alt="image" />
+      </picture>
 
-      <div class="work-together-title">
+      <h2 class="work-together-title">
         <div class="line-top">
           Let’s <span class="blush-color-things">work</span>
         </div>
         <div class="line-bottom">together</div>
-      </div>
+      </h2>
     </div>
 
     <form id="contact-form">
@@ -57,7 +71,6 @@
   </div>
 </section>
 
-<!-- Modal -->
 <div class="backdrop">
   <div id="modal" class="modal">
     <button class="close-modal" aria-label="Close modal">
