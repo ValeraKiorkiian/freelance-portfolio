@@ -29,7 +29,7 @@
   font-size: 16px;
   color: rgba(250, 250, 250, 0.6);
   display: -webkit-box;
-  -webkit-line-clamp: 6;
+  /* -webkit-line-clamp: 6; */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -107,7 +107,6 @@ button.swiper-review {
 .swiper-btn-next:disabled svg {
   --color1: #3b3b3b;
 }
-
 
 @media (min-width: 768px) {
   .reviews.section {
