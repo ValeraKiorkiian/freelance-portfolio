@@ -7,7 +7,7 @@
 
 .container-work {
   min-width: 320px;
-  max-width: 375px;
+
   height: 100%;
   padding: 32px 16px;
 }
@@ -17,7 +17,7 @@
   display: flex;
   gap: 8px;
   align-items: flex-start;
-  margin-bottom: 93px;
+  margin-bottom: 111px;
 }
 
 .logo-wrapper {
@@ -33,22 +33,23 @@
   font-family: sans-serif;
   font-weight: 500;
   font-size: 40px;
-  line-height: 1.2;
+
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--white);
+}
+.line-top {
+  font-size: 40px;
 }
 
 .line-bottom {
   position: absolute;
   top: calc(44px + 8px);
   left: 0;
-  font-size: 40px;
-  line-height: 1.2;
 }
 
 .blush-color-things {
-  color: #c6e327;
+  color: var(--green);
   font-weight: bold;
 }
 
@@ -71,28 +72,18 @@ form {
   position: relative;
 }
 
-/* .input-wrapper input,
-.input-wrapper textarea {
-  border: none;
-  outline: none;
- 
-  background: transparent;
-  color: #fff;
-  font-size: 16px;
-  max-width: 100%;
-} */
 .email,
 .comments {
   position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
+
   gap: 20px;
   width: 343px;
   height: 44px;
 }
-
+.email:hover,
+.comments:hover {
+  color: var(--white);
+}
 .email-wrapper input {
   width: 100%;
   padding-bottom: 20px;
@@ -100,7 +91,7 @@ form {
   border-bottom: 2px solid rgba(250, 250, 250, 0.6);
   background: transparent;
   font-size: 16px;
-  color: #ffffff6f;
+  color: rgba(250, 250, 250, 0.6);
   outline: none;
   resize: none;
   transition: border-color 0.3s ease;
@@ -113,7 +104,7 @@ form {
   border-bottom: 2px solid rgba(250, 250, 250, 0.6);
   background: transparent;
   font-size: 16px;
-  color: #ffffff6f;
+  color: rgba(250, 250, 250, 0.6);
   outline: none;
   resize: none;
   transition: border-color 0.3s ease;
@@ -124,7 +115,7 @@ form {
 }
 .input-wrapper input:hover,
 .input-wrapper textarea:hover {
-  border-color: #fff;
+  border-color: var(--white);
 }
 .input-wrapper input,
 .input-wrapper textarea {
@@ -133,33 +124,33 @@ form {
 
 .email-wrapper input.valid,
 textarea.valid {
-  border-bottom: 1px solid #2ecc71;
+  border-bottom: 1px solid var(--success);
 }
 
 .email-wrapper input.invalid,
 textarea.invalid {
-  border-bottom: 1px solid #e74c3c;
+  border-bottom: 1px solid var(--invalid-form);
 }
 .validation-message.success {
-  color: #2ecc71;
+  color: var(--success);
 }
 
 .validation-message.error {
-  color: #e74c3c;
+  color: var(--invalid-form);
 }
 
 .email-wrapper.error input {
-  border-bottom-color: #e74c3c;
+  border-bottom-color: var(--invalid-form);
 }
 
 .email-wrapper.error .email-message {
-  color: #e74c3c;
+  color: var(--invalid-form);
   display: block;
 }
 
 .spinner {
   border: 4px solid rgba(255, 255, 255, 0.879);
-  border-top: 4px solid #c6e327;
+  border-top: 4px solid var(--green);
   border-radius: 50%;
   width: 32px;
   height: 32px;
@@ -177,23 +168,20 @@ textarea.invalid {
 .hidden {
   display: none;
 }
-button {
-  background-color: #c6e327;
-  color: #fff;
+.btn-work {
+  background-color: var(--green);
+  color: var(-white);
   padding: 10px;
   border: none;
   border-radius: 50%;
   cursor: pointer;
-}
-button:hover {
-  background-color: #596808;
-}
-
-.btn-work {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
 }
+.btn-work:hover {
+  background-color: var(--green-hover);
+}
+
 .contact-info {
   display: flex;
   align-items: flex-start;
@@ -241,13 +229,13 @@ button:hover {
   font-size: 14px;
   font-weight: 300;
   letter-spacing: -0.02em;
-  color: #fff;
+  color: var(-white-);
   text-decoration: none;
   box-sizing: border-box;
 }
 .work-list-email:hover,
 .work-list-tel:hover {
-  border-color: #fff;
+  border-color: var(--white);
 }
 .work-list-email,
 .work-list-tel {
@@ -285,7 +273,7 @@ button:hover {
   max-width: 343px;
   max-height: 276px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  background-color: #1c1d20;
+  background-color: var(--background);
   border: 1px solid rgba(250, 250, 250, 0.1);
   border-radius: 20px;
   padding: 64px 32px;
@@ -295,8 +283,8 @@ button:hover {
 
 .close-modal {
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 20px;
+  right: 20px;
   background: none;
   border: none;
   cursor: pointer;
@@ -310,18 +298,6 @@ button:hover {
   height: 24px;
 }
 
-.modal-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: center;
-
-  max-width: 279px;
-  max-height: 148px;
-  color: #fafafa;
-}
-
 .modal-text h3 {
   font-size: 20px;
   font-weight: 500;
@@ -329,7 +305,7 @@ button:hover {
   line-height: 1.4;
   letter-spacing: -0.02em;
   text-align: center;
-  color: #fafafa;
+  color: var(-white-);
 }
 
 .modal-text p {
@@ -343,14 +319,11 @@ button:hover {
 @media only screen and (min-width: 768px) {
   .work-together {
     display: flex;
-    flex-direction: column;
   }
 
   .container-work {
     max-width: 768px;
-
-    padding-top: 80px;
-    padding-left: 32px;
+    padding-top: 88px;
   }
 
   .title-work {
@@ -380,12 +353,9 @@ button:hover {
   }
 
   form {
+    max-width: 100%;
     display: flex;
     flex-direction: row;
-
-    align-items: flex-start;
-    max-width: 100%;
-    justify-content: space-between;
     align-items: center;
     gap: 32px;
     margin: 0;
@@ -436,13 +406,14 @@ button:hover {
   }
   .modal-text {
     max-width: 364px;
-    max-height: 118px;
+    min-height: 118px;
     text-align: center;
   }
 }
 @media only screen and (min-width: 1440px) {
   .container-work {
     max-width: 1440px;
+    padding-top: 0;
   }
   .title-work {
     max-width: 542px;

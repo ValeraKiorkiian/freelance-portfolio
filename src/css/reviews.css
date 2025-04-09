@@ -1,0 +1,126 @@
+.reviews {
+  padding-top: 0;
+}
+
+.reviews-title {
+  font-size: 16px;
+  margin-bottom: 32px;
+  color: rgba(250, 250, 250, 0.4);
+}
+
+.reviews-swiper {
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-avatar_url {
+  border-radius: 10%;
+  object-fit: cover;
+  margin: 12px 0px 32px;
+}
+
+.swiper-author {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #fafafa;
+}
+
+.swiper-review {
+  font-size: 16px;
+  color: rgba(250, 250, 250, 0.6);
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.swiper-id {
+  padding: 32px 24px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 12px;
+  height: 344px;
+}
+
+button.swiper-review {
+  height: unset;
+}
+
+@media (min-width: 768px) {
+  .swiper-id {
+    height: 332px;
+  }
+}
+
+.swiper-btn {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.swiper-btn-prev,
+.swiper-btn-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 18px;
+}
+
+.swiper-btn-prev:hover,
+.swiper-btn-next:hover {
+  background-color: transparent;
+  border-color: var(--green-hover);
+}
+
+.swiper-btn-prev:hover svg,
+.swiper-btn-next:hover svg {
+  --color1: var(--green-hover);
+}
+
+.swiper-btn-prev:active,
+.swiper-btn-next:active {
+  background-color: transparent;
+  border-color: var(--green-hover);
+}
+
+.swiper-btn-prev:active svg,
+.swiper-btn-next:active svg {
+  --color1: var(--green);
+}
+
+.swiper-btn-prev {
+  transform: rotate(180deg);
+}
+
+.swiper-btn-prev:disabled,
+.swiper-btn-next:disabled {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  stroke: #3b3b3b;
+}
+
+.swiper-btn-prev:disabled svg,
+.swiper-btn-next:disabled svg {
+  --color1: #3b3b3b;
+}
+
+
+@media (min-width: 768px) {
+  .reviews.section {
+    padding-bottom: 96px;
+  }
+  .review-left,
+  .review-right {
+    width: 32px;
+    height: 32px;
+  }
+}
+@media (min-width: 768px) {
+  .reviews.section {
+    padding-bottom: 96px;
+  }
+}
