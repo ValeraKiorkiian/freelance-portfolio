@@ -5,8 +5,8 @@
   width: 100%;
   height: 100%;
   background-image: image-set(
-    url('/src/img/menu/Menu.webp') 1x,
-    url('/src/img/menu/Menu@2x.webp') 2x
+    url('/img/menu/Menu.webp') 1x,
+    url('/img/menu/Menu@2x.webp') 2x
   );
   background-repeat: no-repeat;
   background-size: cover;
