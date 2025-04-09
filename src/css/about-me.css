@@ -360,11 +360,6 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
-  .container-swiper .container-swiper {
-    padding: 0 32px;
-  }
-}
 
 .about-button-next:hover {
   --color1: var(--green-hover);
