@@ -1,9 +1,7 @@
-.projects {}
 
 
-.projects-container {
-    
-}
+
+
 
 .projects-title {
     text-transform: uppercase;
@@ -224,7 +222,6 @@
     .projects-technologies-container {
         padding: 64px;
         background: var(--white);
-
         border-top-right-radius: 0;
         border-bottom-left-radius: 24px;
     }
@@ -238,7 +235,6 @@
         border-bottom-left-radius: 0;
         border-bottom-left-radius: 0;
     }
-  
 }
 
 
@@ -251,10 +247,7 @@
 
 
 
-/* .swiper-button-disabled {
-    opacity: 0.5;
-    pointer-events: none;
-} */
+
 
  
 
