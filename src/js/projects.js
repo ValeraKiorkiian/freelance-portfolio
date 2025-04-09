@@ -2,10 +2,10 @@ import 'swiper/css';
 // import 'swiper/css/navigation';
 // Swiper.use([Keyboard]);
 import Swiper from 'swiper';
-import { Navigation, Keyboard } from 'swiper/modules';
+import { Navigation, Keyboard,Parallax } from 'swiper/modules';
 
 const projectsSwiper = new Swiper('#projects-swiper', {
-  modules: [Navigation, Keyboard],
+  modules: [Navigation, Keyboard,Parallax],
   slidesPerView: 1,
   navigation: {
     nextEl: '.projects-button-next',
@@ -14,6 +14,10 @@ const projectsSwiper = new Swiper('#projects-swiper', {
   keyboard: {
     enabled: true,
     onlyInViewport: true,
+  },
+  parallax: {
+    enabled: true,
+    speed:2000,
   },
   a11y: {
     enabled: true,
@@ -39,8 +43,16 @@ const projectsSwiper = new Swiper('#projects-swiper', {
   },
 });
 
-// export const button = document.querySelectorAll('.projects-btn');
-// const url = 'https://github.com/ValeraKiorkiian/freelance-portfolio/tree/main';
-// button.addEventListener('click', () => {
-//   window.open(url, '_blank');
-// });
+
+
+const buttons = document.querySelectorAll('.projects-btn'); 
+
+const url = 'https://github.com/ValeraKiorkiian/freelance-portfolio/tree/main';
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        window.open(url, '_blank'); 
+    });
+});
+  
+
