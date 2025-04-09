@@ -1,7 +1,7 @@
 .about-me {
   position: relative;
   background: var(--background);
-  padding: 64px 0 32px;
+  padding: 64px 0 32px; 
 }
 
 @media screen and (min-width: 768px) {
@@ -39,7 +39,7 @@
 }
 
 .about-left {
-  padding: 24px 24px 212px;
+  padding: 24px 24px 30px;
   margin-bottom: 16px;
   background-color: var(--cards);
   border-radius: 24px;
@@ -47,13 +47,13 @@
 
 @media screen and (min-width: 375px) {
   .about-left {
-    padding: 32px 32px 272px;
+    padding: 32px 32px 36px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .about-left {
-    padding: 64px 64px 436px;
+    padding: 64px 64px 36px;
   }
 }
 
@@ -72,6 +72,7 @@
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: var(--white);
+  margin-bottom: 36px;
 }
 
 @media screen and (min-width: 768px) {
@@ -192,6 +193,7 @@
   background: var(--background);
   color: var(--white);
 }
+
 #accordion-about .ac:first-child .ac-panel .ac-text:first-child {
   padding-bottom: 22px;
   padding-top: 8px;
@@ -208,14 +210,14 @@
 }
 
 @media screen and (min-width: 1440px) {
- #accordion-about .ac .ac-panel {
+  #accordion-about .ac .ac-panel {
     padding: 0 68px 32px 696px;
   }
 
   #accordion-about .ac:not(:first-child) .ac-panel {
     padding-right: 215px;
   }
-  
+
   #accordion-about .ac.is-active .ac-panel .ac-text:first-child {
     padding-top: 8px;
   }
@@ -323,6 +325,7 @@
     width: 600px;
     height: 200px;
   }
+
   #swiper-about .swiper-slide {
     width: 200px;
     height: 200px;
@@ -339,30 +342,27 @@
   background: var(--green);
 }
 
-#swiper-about .about-button-next {
+.container-swiper .about-button-next {
   width: 28px;
   height: 28px;
   border-radius: 50%;
+  cursor: pointer;
   pointer-events: auto;
   display: block;
   color: var(--arrow);
 }
 
+
 @media screen and (min-width: 768px) {
-  #swiper-about .about-button-next {
+  .container-swiper .about-button-next {
     width: 40px;
     height: 40px;
   }
 }
 
-@media screen and (min-width: 1440px) {
-  #swiper-about .container-swiper {
-    padding: 0 32px;
-  }
-}
 
 .about-button-next:hover {
-  color: var(--green-hover);
+  --color1: var(--green-hover);
 }
 
 .about-button-next:active {
@@ -370,5 +370,100 @@
 }
 
 .icon-next {
-  --color1: currentColor;
+  --color1: var(--arrow);
 }
+
+.about-button-next:hover .icon-next {
+  --color1: var(--green-hover);
+}
+
+.about-button-next:active .icon-next {
+  --color1: var(--green);
+}
+
+.icon-scroll-to-up {
+  --color1: rgba(188, 224, 8, 0.582);
+  margin-top: -10px;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 1px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--green-hover);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  padding-top: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .scroll-to-top {
+    bottom: 10px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.scroll-to-top:hover {
+  background-color: rgba(172, 255, 47, 0.137);
+  border: 1px solid var(--green-hover);
+}
+
+.scroll-to-top:active {
+  border-color: var(--success);
+}
+
+.scroll-to-top:active .icon-scroll-to-up {
+  --color1: var(--success);
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.swiper-mini-preview {
+  position: relative;
+  width: 279px;
+  height: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-mini-preview {
+    width: 550px;
+    height: 364px;
+  }
+}
+
+#swiper-mini {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#swiper-mini.visible {
+  opacity: 1;
+}
+
+
+
+

@@ -1,0 +1,183 @@
+.covers {
+  padding-top: 0;
+}
+.covers-list {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 508px;
+  background-color: var(--backing-color);
+  background-image: radial-gradient(
+      circle at 18% 12%,
+      var(--accent-dark-color) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 103% 97%,
+      var(--accent-dark-color) 0%,
+      transparent 45%
+    );
+  background-repeat: no-repeat;
+  background-position: center;
+  backdrop-filter: blur(30px);
+}
+@media only screen and (min-width: 768px) {
+  .covers.section {
+    padding-bottom: 96px;
+  }
+  .covers-list {
+    max-height: 960px;
+    background-image: radial-gradient(
+        circle at 30% 6%,
+        var(--accent-dark-color) 0%,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 97% 74%,
+        var(--accent-dark-color) 0%,
+        transparent 25%
+      );
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .covers-list {
+    background-image: radial-gradient(
+        circle at 10% 31%,
+        var(--accent-dark-color) 0%,
+        transparent 20%
+      ),
+      radial-gradient(
+        circle at 39% 10%,
+        var(--accent-dark-color) 0%,
+        transparent 20%
+      ),
+      radial-gradient(
+        circle at 91% 85%,
+        var(--accent-dark-color) 0%,
+        transparent 20%
+      );
+  }
+}
+.covers-wrapper {
+  margin: 12px 0;
+  transform: translateY(-270px) rotate(16deg);
+}
+.covers-wrapper:nth-child(1) .covers-wrapper-item:first-child {
+  margin-left: 153px;
+}
+.covers-wrapper:nth-child(2) .covers-wrapper-item:first-child {
+  margin-left: 0;
+}
+.covers-wrapper:nth-child(3) .covers-wrapper-item:first-child {
+  margin-left: -690px;
+}
+.covers-wrapper:nth-child(4) .covers-wrapper-item:first-child {
+  margin-left: -77px;
+}
+.covers-wrapper:nth-child(5) .covers-wrapper-item:first-child {
+  margin-left: -690px;
+}
+
+@media only screen and (min-width: 768px) {
+  .covers-wrapper {
+    margin: 32px 0;
+    transform: translateY(-510px) rotate(16deg);
+  }
+  .covers-wrapper:nth-child(1) .covers-wrapper-item:first-child {
+    margin-left: 144px;
+  }
+  .covers-wrapper:nth-child(2) .covers-wrapper-item:first-child {
+    margin-left: -115px;
+  }
+  .covers-wrapper:nth-child(3) .covers-wrapper-item:first-child {
+    margin-left: -1430px;
+  }
+  .covers-wrapper:nth-child(4) .covers-wrapper-item:first-child {
+    margin-left: -288px;
+  }
+  .covers-wrapper:nth-child(5) .covers-wrapper-item:first-child {
+    margin-left: -1300px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .covers-wrapper {
+    margin: 36px 0;
+    transform: translateY(-520px) rotate(16deg);
+  }
+  .covers-wrapper:nth-child(1) .covers-wrapper-item:first-child {
+    margin-left: 210px;
+  }
+  .covers-wrapper:nth-child(2) .covers-wrapper-item:first-child {
+    margin-left: 88px;
+  }
+  .covers-wrapper:nth-child(3) .covers-wrapper-item:first-child {
+    margin-left: -1155px;
+  }
+  .covers-wrapper:nth-child(4) .covers-wrapper-item:first-child {
+    margin-left: -35px;
+  }
+  .covers-wrapper:nth-child(5) .covers-wrapper-item:first-child {
+    margin-left: -1628px;
+  }
+}
+.covers-wrapper-list {
+  display: flex;
+}
+.covers-wrapper-item {
+  flex-shrink: 0;
+  margin: 0 12px;
+}
+@media only screen and (min-width: 768px) {
+  .covers-wrapper-item {
+    margin: 0 24px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .covers-wrapper-item {
+    margin: 0 32px;
+  }
+}
+.covers-list.active .covers-wrapper-item {
+  animation-duration: 50s;
+  animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.covers-wrapper:nth-child(odd) .covers-wrapper-item {
+  animation-name: marqueeLineLeft;
+}
+.covers-wrapper:nth-child(even) .covers-wrapper-item {
+  animation-name: marqueeLineRight;
+}
+.covers-wrapper-item > img {
+  width: 282px;
+  height: 163px;
+}
+.covers-wrapper-item > img {
+  object-fit: cover;
+}
+@media only screen and (min-width: 768px) {
+  .covers-wrapper-item > img {
+    width: 544px;
+    height: 314px;
+  }
+}
+
+@keyframes marqueeLineLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(220%);
+  }
+}
+
+@keyframes marqueeLineRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-220%);
+  }
+}
