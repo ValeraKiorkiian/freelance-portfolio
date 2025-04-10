@@ -187,6 +187,12 @@ textarea.invalid {
     max-width: 100%;
   }
 }
+.work-list-email {
+  min-width: 178px;
+}
+.work-list-tel {
+  min-width: 118px;
+}
 .work-list-email,
 .work-list-tel {
   display: flex;
@@ -352,6 +358,7 @@ textarea.invalid {
     flex-direction: row;
     gap: 8px;
   }
+
   .work-list-email a,
   .work-list-tel a {
     font-size: 16px;
