@@ -1,25 +1,34 @@
 .covers {
-    padding-top: 0;
-    position: relative;
-    width: 100%;
-    height: 508px;
-    overflow: hidden;
-    background-color: #3b3b3b;
-    background-image: radial-gradient(circle 280px at 15% 25%, #c6e32759 0%, rgba(198, 227, 39, 0) 60%),
-        radial-gradient(circle 280px at 70% 20%, #c6e32759 0%, rgba(198, 227, 39, 0) 60%),
-        radial-gradient(circle 280px at 60% 85%, #c6e32759 0%, rgba(198, 227, 39, 0) 60%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    max-width: 1440px;
-    margin: 0 auto;
+  padding-top: 0;
+  position: relative;
+  width: 100%;
+  height: 508px;
+  overflow: hidden;
+  background-color: #3b3b3b;
+  background-image: radial-gradient(
+      circle 280px at 15% 25%,
+      #c6e32759 0%,
+      rgba(198, 227, 39, 0) 60%
+    ),
+    radial-gradient(
+      circle 280px at 70% 20%,
+      #c6e32759 0%,
+      rgba(198, 227, 39, 0) 60%
+    ),
+    radial-gradient(
+      circle 280px at 60% 85%,
+      #c6e32759 0%,
+      rgba(198, 227, 39, 0) 60%
+    );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .covers-list {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   max-width: 100%;
-  max-height: 508px;
   background-color: var(--backing-color);
   background-image: radial-gradient(
       circle at 18% 12%,
@@ -37,16 +46,25 @@
 }
 @media only screen and (min-width: 768px) {
   .covers {
-            height: 960px;
-    
-            background-image: radial-gradient(circle 350px at 20% 30%, #c6e32759 0%, rgba(198, 227, 39, 0) 60%),
-                radial-gradient(circle 350px at 60% 20%, #c6e32759 0%, rgba(198, 227, 39, 0) 60%),
-                radial-gradient(circle 350px at 80% 85%, #c6e32759 0%, rgba(198, 227, 39, 0) 60%);
-    
-        }
-  .covers.section {
-    padding-bottom: 96px;
+    height: 960px;
+
+    background-image: radial-gradient(
+        circle 350px at 20% 30%,
+        #c6e32759 0%,
+        rgba(198, 227, 39, 0) 60%
+      ),
+      radial-gradient(
+        circle 350px at 60% 20%,
+        #c6e32759 0%,
+        rgba(198, 227, 39, 0) 60%
+      ),
+      radial-gradient(
+        circle 350px at 80% 85%,
+        #c6e32759 0%,
+        rgba(198, 227, 39, 0) 60%
+      );
   }
+
   .covers-list {
     max-height: 960px;
     background-image: radial-gradient(
