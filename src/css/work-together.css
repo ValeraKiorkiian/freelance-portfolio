@@ -1,38 +1,44 @@
+.work-together {
+  background-image: url(img/mobile/work-together-elements@2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  overflow: hidden;
+  position: relative;
+}
+.work-together .container {
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
 .title-work {
   position: relative;
   display: flex;
-  min-height: 44px;
+  gap: 8px;
 }
 
 .logo-wrapper {
-  padding-top: 32px;
+  width: 44px;
+  flex-shrink: 0;
 }
 
 .logo-wrapper img {
-  flex-shrink: 0;
-  border-radius: 12px;
-
   width: 44px;
   height: 44px;
 }
-
 .work-together-title {
   font-family: sans-serif;
   font-weight: 500;
   font-size: 40px;
-  line-height: 72px;
-
+  line-height: 1.2;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
-  color: var(--white);
-}
-.line-top {
-  padding-left: 8px;
-  padding-top: 16px;
-  display: flex;
-  gap: 7px;
 }
 .blush-color-things {
-  color: var(--green);
+  color: #c6e327;
 }
 .line-bottom {
   position: absolute;
@@ -46,8 +52,16 @@ form {
   gap: 32px;
   padding-top: 111px;
 }
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 .email-wrapper {
   padding-bottom: 16px;
+  position: relative;
+}
+.comments-wrapper {
+  position: relative;
 }
 
 .email,
@@ -162,7 +176,6 @@ textarea.invalid {
 
 .contact-info {
   display: flex;
-
   flex-direction: row;
   gap: 4px;
 
@@ -176,7 +189,7 @@ textarea.invalid {
   align-items: center;
   border: 1px solid rgba(247, 236, 236, 0.167);
   border-radius: 60px;
-  padding: 10px 12px;
+
   height: 37px;
   text-align: center;
 }
@@ -184,8 +197,11 @@ textarea.invalid {
 .work-list-email a,
 .work-list-tel a {
   font-size: 14px;
+  letter-spacing: -0.02em;
 }
-
+.work-list-tel a {
+  width: 118px;
+}
 .work-list-email:hover,
 .work-list-tel:hover {
   border-color: var(--white);
@@ -209,8 +225,8 @@ textarea.invalid {
   height: 100%;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 250ms ease-in-out;
-  overflow: hidden;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-open {
@@ -219,11 +235,6 @@ textarea.invalid {
 }
 
 .modal {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-
   max-width: 343px;
   max-height: 276px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -253,47 +264,55 @@ textarea.invalid {
 }
 
 .modal-text h3 {
-  font-size: 20px;
   font-weight: 500;
-  margin-bottom: 16px;
+  font-size: 20px;
   line-height: 1.4;
   letter-spacing: -0.02em;
   text-align: center;
-  color: var(-white-);
 }
 
 .modal-text p {
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: -0.02em;
   text-align: center;
   color: rgba(250, 250, 250, 0.6);
 }
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
 
-@media only screen and (min-width: 768px),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+@media only screen and (min-width: 768px) {
   .work-together {
     padding-top: 80px;
-    padding-bottom: 69px;
-    background-image: url(../img/desktop/Work\ together-2x.webp.jpg);
-  }
 
+    padding-bottom: 169px;
+    background-image: url(img/tablet/Work\ together-2x.webp.png);
+  }
+  .work-together .container {
+    padding-bottom: 0;
+    padding-left: 32px;
+  }
+  .title-work {
+    gap: 20px;
+  }
+  .logo-wrapper {
+    width: 70px;
+  }
   .logo-wrapper img {
     width: 70px;
     height: 70px;
-    border-radius: 24px;
   }
-
   .work-together-title {
     font-size: 64px;
   }
   .line-top {
-    padding-left: 20px;
     padding-top: 32px;
   }
   .line-bottom {
-    padding-top: 40px;
+    padding-top: 10px;
   }
 
   form {
@@ -304,10 +323,9 @@ textarea.invalid {
     margin-bottom: 18px;
   }
   .input-wrapper {
-    display: flex;
     flex-direction: row;
-    gap: 20px;
     align-items: stretch;
+    gap: 32px;
   }
   .email-wrapper {
     width: 245px;
@@ -329,11 +347,14 @@ textarea.invalid {
     flex-direction: row;
     gap: 8px;
   }
+  .work-list-email a,
+  .work-list-tel a {
+    font-size: 16px;
+    letter-spacing: -0.02em;
+  }
   .work-list-email {
     min-width: 239px;
     min-height: 55px;
-
-    padding: 18px 32px;
   }
   .work-list-tel {
     min-width: 171px;
@@ -350,17 +371,19 @@ textarea.invalid {
     max-width: 364px;
     min-height: 118px;
     text-align: center;
+    display: flex;
+
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 16px;
   }
 }
-/* @media only screen and (min-width: 1440px),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+@media only screen and (min-width: 1440px) {
   .work-together {
-    background-image: url(../img/tablet/Work\ together-2x.webp.png);
-  }
-  .work-together .container {
     padding-left: 196px;
+    background-image: url(img/desktop/Work\ together-2x.webp.jpg);
   }
+
   .input-wrapper {
     gap: 32px;
     justify-content: space-between;
@@ -374,4 +397,4 @@ textarea.invalid {
     height: 44px;
     padding-right: 86px;
   }
-} */
+}
