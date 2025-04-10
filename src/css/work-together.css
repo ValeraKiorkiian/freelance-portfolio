@@ -114,12 +114,12 @@ form {
   transition: border-color 0.3s ease;
 }
 
-input.valid,
+.email-wrapper input.valid,
 textarea.valid {
   border-bottom: 1px solid var(--success);
 }
 
-input.invalid,
+.email-wrapper input.invalid,
 textarea.invalid {
   border-bottom: 1px solid var(--invalid-form);
 }

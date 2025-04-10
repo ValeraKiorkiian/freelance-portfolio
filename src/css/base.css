@@ -7,16 +7,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-
+  --font-family: 'Inter Tight', serif;
   --background: #1c1d20;
+  --title: #fafafa66;
   --cards: #242527;
   --arrow: #3b3b3b;
   --green: #c6e327;
-  --green-hover: #596808;
+  --green-hover: #97ad1d;
   --success: #3cbc81;
   --invalid-form: #e74a3b;
   --white: #fafafa;
   --transition-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bg-color: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-background-color: background-color 250ms
     cubic-bezier(0.4, 0, 0.2, 1);
   --transition-transform: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);

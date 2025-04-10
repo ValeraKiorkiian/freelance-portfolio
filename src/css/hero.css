@@ -1,0 +1,102 @@
+/* mobile styles */
+.hero {
+  position: relative;
+  padding-top: 282px;
+  padding-bottom: 32px;
+  background-image: image-set(
+    url('/img/mobile/hero.webp') 1x,
+    url('/img/mobile/hero@2x.webp') 2x
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hero-container {
+  display: flex;
+  flex-direction: column; /* Сохраняет вертикальное направление для элементов */
+  gap: 212px;
+}
+.hero-socials-list {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 10px;
+  margin-top: -100px;
+}
+.hero-socials-list-item-link {
+  display: flex;
+  justify-content: center;
+  width: 37px;
+  height: 37px;
+  padding: 10px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  transition: var(--transition-bg-color);
+}
+.hero-socials-list-item-link:hover {
+  border-color: var(--white);
+}
+
+.hero-socials-list-item-link.mail {
+  width: 178px;
+}
+
+@media (min-width: 359px) {
+  .hero-socials-list {
+    margin-top: -50px;
+  }
+}
+@media (min-width: 374px) {
+  .hero-socials-list {
+    margin-top: 0px;
+  }
+}
+/* Tablet styles */
+
+@media (min-width: 768px) {
+  .hero {
+    padding-top: 300px;
+    padding-bottom: 32px;
+    background-image: image-set(
+      url('/img/tablet/hero.webp') 1x,
+      url('/img/tablet/hero@2x.webp') 2x
+    );
+  }
+  .hero-container {
+    gap: 186px;
+  }
+  .hero-socials-list {
+    justify-content: end;
+    gap: 8px;
+  }
+  .hero-socials-list-item-link {
+    padding: 18px;
+    width: 55px;
+    height: 55px;
+  }
+  .hero-socials-list-item-link.mail {
+    width: 224px;
+  }
+}
+
+/* Desktop styles */
+
+@media only screen and (min-width: 1440px) {
+  .hero {
+    padding-top: 300px;
+    padding-bottom: 32px;
+    background-image: image-set(
+      url('/img/desktop/Hero.webp') 1x,
+      url('/img/desktop/Hero@2x.webp') 2x
+    );
+  }
+  .hero-container {
+    gap: 242px;
+  }
+  h1.hero-title {
+    width: 1084px;
+    margin: 0 auto;
+  }
+}

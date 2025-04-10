@@ -1,5 +1,53 @@
-<section class="header">
-  <div class="container">
-    <h2 class="header-title">Header</h2>
+<header class="header">
+  <div class="container header-container">
+    <nav class="header-nav">
+      <a
+        href="https://valerakiorkiian.github.io/freelance-portfolio/"
+        class="header-link"
+      >
+        <img
+          class="header-logo"
+          width="80"
+          height="80"
+          srcset="/img/logo/logo_1x.webp 1x, /img/logo/logo_2x.webp 2x"
+          src="/img/logo/logo_1x.webp"
+          alt="logo"
+        />
+        <svg class="header-icon" width="84" height="19">
+          <use href="/img/sprite.svg#icon-jefferson"></use>
+        </svg>
+      </a>
+      <div class="nav-wrapper">
+        <button class="nav-list-btn js-nav-list-open" type="button">
+          Menu
+        </button>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#about-me" class="nav-item-link">About me</a>
+          </li>
+          <li><a href="#benefits" class="nav-item-link">Benefits</a></li>
+          <li><a href="#projects" class="nav-item-link">Projects</a></li>
+          <li><a href="#faq" class="nav-item-link">FAQ</a></li>
+        </ul>
+      </div>
+      <button class="burger-open-btn js-open-menu" type="button">
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3.5 9.91666H24.5M3.5 18.0833H24.5"
+            stroke="#FAFAFA"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <a href="#work-together" class="nav-link">Order the project</a>
+    </nav>
   </div>
-</section>
+</header>
