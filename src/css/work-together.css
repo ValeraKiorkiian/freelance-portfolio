@@ -1,5 +1,5 @@
 .work-together {
-  background-image: url(img/mobile/work-together-elements@2x.jpg);
+  background-image: url('img/mobile/work-together-elements@2x.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -300,7 +300,7 @@ textarea.invalid {
     padding-top: 80px;
 
     padding-bottom: 169px;
-    background-image: url(img/tablet/Work_together-lap-2x.png);
+    background-image: url('img/tablet/Work_together-lap-2x.png');
   }
   .work-together .container {
     padding-bottom: 0;
@@ -393,7 +393,7 @@ textarea.invalid {
 @media only screen and (min-width: 1440px) {
   .work-together {
     padding-left: 196px;
-    background-image: url(img/desktop/Work_together-2x.jpg);
+    background-image: url('img/desktop/Work_together-2x.jpg');
   }
 
   .input-wrapper {
