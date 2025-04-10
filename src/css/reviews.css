@@ -1,5 +1,5 @@
 .reviews {
-  padding-top: 0;
+  padding-top: 64px;
 }
 
 .reviews-title {
@@ -108,9 +108,9 @@ button.swiper-review {
   --color1: #3b3b3b;
 }
 
-
 @media (min-width: 768px) {
   .reviews.section {
+    padding-top: 96px;
     padding-bottom: 96px;
   }
   .review-left,
@@ -119,8 +119,9 @@ button.swiper-review {
     height: 32px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
   .reviews.section {
-    padding-bottom: 96px;
+    padding-top: 164px;
+    padding-bottom: 164px;
   }
 }
