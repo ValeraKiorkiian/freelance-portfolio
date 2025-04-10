@@ -15,10 +15,36 @@ import 'swiper/css/effect-coverflow';
 
 document.addEventListener('DOMContentLoaded', () => {
   new Accordion('#accordion-about', {
-    duration: 300,
+    duration: 700,
     showMultiple: false,
     openOnInit: [0],
   });
+
+    const container = document.querySelector('#accordion-about');
+
+  container.addEventListener('click', function (event) {
+    const trigger = event.target.closest('.ac-trigger');
+    if (!trigger) return;
+
+    const item = trigger.closest('.ac');
+    if (!item) return;
+
+    const prevTop = item.getBoundingClientRect().top + window.scrollY;
+
+    setTimeout(() => {
+      const newTop = item.getBoundingClientRect().top + window.scrollY;
+      const scrollDiff = newTop - prevTop;
+
+      if (scrollDiff !== 0) {
+        window.scrollBy({
+          top: scrollDiff,
+          behavior: 'smooth',
+        });
+      }
+    }, 750);
+  });
+
+    
 
   const swiper = new Swiper('#swiper-about', {
     modules: [Navigation, Autoplay, Keyboard, EffectCreative],
