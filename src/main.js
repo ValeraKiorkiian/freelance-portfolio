@@ -12,4 +12,3 @@ btnScrollUp.addEventListener('click', scrollToTop);
 window.addEventListener('scroll', scrollShow);
 
 import './js/cover';
-
