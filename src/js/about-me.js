@@ -15,16 +15,14 @@ import 'swiper/css/effect-coverflow';
 
 document.addEventListener('DOMContentLoaded', () => {
   new Accordion('#accordion-about', {
-    duration: 900,
+    duration: 700,
     showMultiple: false,
     openOnInit: [0],
   });
 });
 
-
 document.addEventListener('DOMContentLoaded', function () {
-
-    const container = document.querySelector('#accordion-about');
+  const container = document.querySelector('#accordion-about');
 
   container.addEventListener('click', function (event) {
     const trigger = event.target.closest('.ac-trigger');
@@ -47,9 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }, 750);
   });
-
-    
-
 
   const swiper = new Swiper('#swiper-about', {
     modules: [Navigation, Autoplay, Keyboard, EffectCoverflow, EffectCreative],
