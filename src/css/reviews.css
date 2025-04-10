@@ -16,7 +16,7 @@
 .swiper-avatar_url {
   border-radius: 10%;
   object-fit: cover;
-  margin: 12px 0px 32px;
+  margin-bottom: 32px;
 }
 
 .swiper-author {
