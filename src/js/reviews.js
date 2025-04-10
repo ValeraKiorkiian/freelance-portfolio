@@ -44,7 +44,7 @@ async function renderReviews() {
   reviews.forEach(review => {
     const reviewItem = `
             <li class="swiper-slide swiper-review swiper-id">
-                <img class="swiper-avatar_url" src="${review.avatar_url}" width="48" height="48" alt="${review.author} loading="lazy"">
+                <img class="swiper-avatar_url" src="${review.avatar_url}" width="48" height="48" alt="${review.author}" loading="lazy">
                 <h3 class="swiper-author">${review.author}</h3>
                 <p class="swiper-review">${review.review}</p>
             </li>
