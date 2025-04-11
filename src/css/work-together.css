@@ -57,7 +57,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding-top: 111px;
+  margin-bottom: 32px;
 }
 .input-wrapper {
   display: flex;
@@ -305,7 +305,7 @@ textarea.invalid {
 
 @media only screen and (min-width: 768px) {
   .work-together {
-    background-image: url(img/tablet/Work\together-2x.webp.png);
+    background-image: url(img/tablet/work_together-lap-2x.png);
   }
   .work-together-container {
     padding-bottom: 169px;
