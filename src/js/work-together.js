@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
       return false;
     }
   }
-
+// -----------
   function validateComments() {
     const commentsValue = commentsInput.value.trim();
     if (commentsValue.length > 0) {
