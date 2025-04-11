@@ -7,18 +7,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const commentsInput = document.getElementById('comments');
   const commentsWrapper = document.querySelector('.comments-wrapper');
-const commentsMessage = document.querySelector('.comments-message');
-  
+  const commentsMessage = document.querySelector('.comments-message');
+
   const modal = document.getElementById('modal');
   const backdrop = document.querySelector('.backdrop');
   const closeModalBtn = document.querySelector('.close-modal');
   const spinner = document.getElementById('spinner');
 
-
-    function validateEmail() {
+  function validateEmail() {
     const emailValue = emailInput.value.trim();
-      const emailPattern = new RegExp(emailInput.pattern);
-      
+    const emailPattern = new RegExp(emailInput.pattern);
+
     if (emailPattern.test(emailValue)) {
       emailInput.classList.remove('invalid');
       emailInput.classList.add('valid');
@@ -48,63 +47,49 @@ const commentsMessage = document.querySelector('.comments-message');
   }
 
   emailInput.addEventListener('input', validateEmail);
- commentsInput.addEventListener('input', validateComments);
-  
+  commentsInput.addEventListener('input', validateComments);
+
   form.addEventListener('submit', function (event) {
     event.preventDefault();
- const isEmailValid = validateEmail();
+    const isEmailValid = validateEmail();
     const isCommentsValid = validateComments();
-    
+
     validateEmail();
 
-   if (isEmailValid && isCommentsValid) {
-     // Показ спіннера
-     spinner.classList.remove('hidden');
+    if (isEmailValid && isCommentsValid) {
+      // Показ спіннера
+      spinner.classList.remove('hidden');
 
-     setTimeout(function () {
-       spinner.classList.add('hidden');
-       backdrop.classList.add('is-open');
-       document.body.classList.add('no-scroll'); // Заблокувати прокрутку
+      setTimeout(function () {
+        spinner.classList.add('hidden');
+        backdrop.classList.add('is-open');
+        document.body.classList.add('no-scroll'); // Заблокувати прокрутку
 
-       // Скидання форми та класів
-       form.reset();
-       emailInput.classList.remove('valid', 'invalid');
-       commentsInput.classList.remove('valid', 'invalid');
-       messageElement.textContent = '';
-     }, 2000);
-   }
+        // Скидання форми та класів
+        form.reset();
+        emailInput.classList.remove('valid', 'invalid');
+        commentsInput.classList.remove('valid', 'invalid');
+        messageElement.textContent = '';
+      }, 2000);
+    }
   });
 
- 
   closeModalBtn.addEventListener('click', function () {
     backdrop.classList.remove('is-open');
-document.body.classList.remove('no-scroll'); 
-
-
+    document.body.classList.remove('no-scroll');
   });
 
   backdrop.addEventListener('click', function (event) {
     if (event.target === backdrop) {
       backdrop.classList.remove('is-open');
- document.body.classList.remove('no-scroll');
-
+      document.body.classList.remove('no-scroll');
     }
   });
-
 
   document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
       backdrop.classList.remove('is-open');
-      document.body.classList.remove('no-scroll'); 
+      document.body.classList.remove('no-scroll');
     }
   });
 });
-
-
-
-
-
-
-
-
-

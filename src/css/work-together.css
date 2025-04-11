@@ -101,6 +101,9 @@ form {
   resize: none;
   transition: border-color 0.3s ease;
 }
+.contact-form {
+  margin-bottom: 66px;
+}
 .email-wrapper input::placeholder,
 .comments-wrapper textarea::placeholder {
   color: rgba(250, 250, 250, 0.4);
