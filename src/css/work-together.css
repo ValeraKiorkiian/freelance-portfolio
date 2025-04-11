@@ -398,7 +398,7 @@ textarea.invalid {
 }
 @media only screen and (min-width: 1440px) {
   .work-together {
-    background-image: url(/img/desktop/worc-together-elements@2x.png);
+    background-image: url(/img/desktop/work-together-elements@2x.png);
   }
   .work-together-container {
     padding-left: 196px;
