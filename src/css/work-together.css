@@ -8,42 +8,49 @@
   overflow: hidden;
   position: relative;
 }
-.work-together .container {
+.work-together-container {
   margin: 0 auto;
   position: relative;
   z-index: 2;
 }
 
 .title-work {
-  position: relative;
+  margin-bottom: 64px;
   display: flex;
   gap: 8px;
+  margin-bottom: 64px;
 }
-
 .logo-wrapper {
   width: 44px;
   flex-shrink: 0;
 }
-
-.logo-wrapper img {
-  width: 44px;
-  height: 44px;
-}
-.work-together-title {
-  font-family: sans-serif;
+/* .work-together-container {
   font-weight: 500;
   font-size: 40px;
-  line-height: 1.2;
+  line-height: 1;
   letter-spacing: -0.03em;
   text-transform: uppercase;
+  color: var(--white);
+} */
+/* .logo-wrapper img {
+  width: 44px;
+  height: 44px;
+} */
+.work-together-title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--white);
 }
 .blush-color-things {
   color: #c6e327;
 }
 .line-bottom {
-  position: absolute;
-  top: calc(44px + 8px);
-  left: 0;
+  display: block;
+  margin-top: 8px;
+  margin-left: -52px;
 }
 
 form {
@@ -178,8 +185,6 @@ textarea.invalid {
   display: flex;
   flex-direction: row;
   gap: 4px;
-
-  padding-top: 64px;
 }
 @media (max-width: 349.98px) {
   .contact-info {
@@ -297,17 +302,15 @@ textarea.invalid {
 
 @media only screen and (min-width: 768px) {
   .work-together {
-    padding-top: 80px;
-
-    padding-bottom: 169px;
-    /* background-image: url('/img/tablet/work_together-lap-2x.png'); */
+    background-image: url(img/tablet/Work\ together-2x.webp.png);
   }
-  .work-together .container {
-    padding-bottom: 0;
-    padding-left: 32px;
+  .work-together-container {
+    padding-bottom: 169px;
+    padding-top: 80px;
   }
   .title-work {
-    gap: 20px;
+    gap: 14px;
+    margin-bottom: 17px;
   }
   .logo-wrapper {
     width: 70px;
@@ -318,12 +321,12 @@ textarea.invalid {
   }
   .work-together-title {
     font-size: 64px;
+    letter-spacing: -0.03em;
   }
-  .line-top {
-    padding-top: 32px;
-  }
+
   .line-bottom {
-    padding-top: 10px;
+    margin-top: 10px;
+    margin-left: -84px;
   }
 
   form {
@@ -392,10 +395,12 @@ textarea.invalid {
 }
 @media only screen and (min-width: 1440px) {
   .work-together {
-    padding-left: 196px;
-    /* background-image: url('/img/desktop/work_together-2x.jpg'); */
+    background-image: url(../img/desktop/worc-together-elements@2x.png);
   }
+  .work-together-container {
+    padding-left: 196px;
 
+  }
   .input-wrapper {
     gap: 32px;
     justify-content: space-between;
