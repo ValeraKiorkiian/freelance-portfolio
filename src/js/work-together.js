@@ -1,13 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('contact-form');
+
   const emailInput = document.getElementById('email');
-  const emailWrapper = document.querySelector('.email-wrapper');
-  const emailMessage = document.querySelector('.email-message');
   const messageElement = document.getElementById('message');
 
   const commentsInput = document.getElementById('comments');
-  const commentsWrapper = document.querySelector('.comments-wrapper');
-  const commentsMessage = document.querySelector('.comments-message');
 
   const modal = document.getElementById('modal');
   const backdrop = document.querySelector('.backdrop');
@@ -31,8 +28,10 @@ document.addEventListener('DOMContentLoaded', function () {
       messageElement.textContent = 'Invalid email, try again.';
       messageElement.classList.remove('success');
       messageElement.classList.add('error');
+      return false;
     }
   }
+
   function validateComments() {
     const commentsValue = commentsInput.value.trim();
     if (commentsValue.length > 0) {
@@ -46,50 +45,81 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  function openModal() {
+    backdrop.classList.add('is-open');
+    document.body.classList.add('no-scroll');
+    document.addEventListener('keydown', handleEscape);
+  }
+
+  function closeModal() {
+    backdrop.classList.remove('is-open');
+    document.body.classList.remove('no-scroll');
+    document.removeEventListener('keydown', handleEscape);
+  }
+
+  function handleEscape(event) {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+  }
+
+  backdrop.addEventListener('click', function (event) {
+    if (event.target === backdrop) {
+      closeModal();
+    }
+  });
+
+  closeModalBtn.addEventListener('click', closeModal);
+
   emailInput.addEventListener('input', validateEmail);
   commentsInput.addEventListener('input', validateComments);
 
-  form.addEventListener('submit', function (event) {
+  form.addEventListener('submit', async function (event) {
     event.preventDefault();
+
     const isEmailValid = validateEmail();
     const isCommentsValid = validateComments();
 
-    validateEmail();
+    if (!(isEmailValid && isCommentsValid)) return;
 
-    if (isEmailValid && isCommentsValid) {
-      // Показ спіннера
-      spinner.classList.remove('hidden');
+    spinner.classList.remove('hidden');
 
-      setTimeout(function () {
+    const formData = {
+      email: emailInput.value.trim(),
+      comment: commentsInput.value.trim(),
+    };
+
+    try {
+      const response = await fetch(
+        'https://portfolio-js.b.goit.study/api/requests',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const result = await response.json();
+
+      setTimeout(() => {
         spinner.classList.add('hidden');
-        backdrop.classList.add('is-open');
-        document.body.classList.add('no-scroll'); // Заблокувати прокрутку
+        openModal();
 
-        // Скидання форми та класів
         form.reset();
         emailInput.classList.remove('valid', 'invalid');
         commentsInput.classList.remove('valid', 'invalid');
         messageElement.textContent = '';
-      }, 2000);
-    }
-  });
-
-  closeModalBtn.addEventListener('click', function () {
-    backdrop.classList.remove('is-open');
-    document.body.classList.remove('no-scroll');
-  });
-
-  backdrop.addEventListener('click', function (event) {
-    if (event.target === backdrop) {
-      backdrop.classList.remove('is-open');
-      document.body.classList.remove('no-scroll');
-    }
-  });
-
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-      backdrop.classList.remove('is-open');
-      document.body.classList.remove('no-scroll');
+      }, 1000);
+    } catch (error) {
+      spinner.classList.add('hidden');
+      messageElement.textContent = '❌ Submission failed. Try again.';
+      messageElement.classList.remove('success');
+      messageElement.classList.add('error');
+      console.error('API Error:', error);
     }
   });
 });

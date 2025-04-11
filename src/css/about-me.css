@@ -412,6 +412,7 @@
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
   padding-top: 8px;
+  z-index: 100;
 }
 
 @media screen and (min-width: 768px) {
