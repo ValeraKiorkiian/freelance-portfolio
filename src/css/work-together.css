@@ -1,8 +1,8 @@
 .work-together {
-  background-image: url(img/mobile/work-together-elements@2x.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  /* background-image: url('/img/mobile/work-together-elements@2x.jpg'); */
+  /* background-repeat: no-repeat; */
+  /* background-size: contain; */
+  /* background-position: center; */
   padding-top: 32px;
   padding-bottom: 32px;
   overflow: hidden;
@@ -192,6 +192,12 @@ textarea.invalid {
     max-width: 100%;
   }
 }
+.work-list-email {
+  min-width: 178px;
+}
+.work-list-tel {
+  min-width: 118px;
+}
 .work-list-email,
 .work-list-tel {
   display: flex;
@@ -355,6 +361,7 @@ textarea.invalid {
     flex-direction: row;
     gap: 8px;
   }
+
   .work-list-email a,
   .work-list-tel a {
     font-size: 16px;
@@ -392,6 +399,7 @@ textarea.invalid {
   }
   .work-together-container {
     padding-left: 196px;
+
   }
   .input-wrapper {
     gap: 32px;

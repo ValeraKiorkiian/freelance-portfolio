@@ -2,9 +2,14 @@
   <div class="container work-together-container">
     <div class="title-work">
       <picture class="logo-wrapper">
-        <source srcset="../public/logo.svg" type="image/svg+xml" />
-        <img src="/public/logo.svg" alt="img" width="44" height="44" />
+        <img
+          srcset="/img/logo/logo_1x.webp 1x, /img/logo/logo_2x.webp 2x"
+          src="/img/logo/logo_1x.webp"
+          alt="img"
+          loading="lazy"
+        />
       </picture>
+
       <h2 class="work-together-title">
         Let’s<span class="blush-color-things">work</span><br />
         <span class="line-bottom">together</span>
@@ -64,7 +69,6 @@
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        loading="lazy"
       >
         <path
           d="M18 6L6 18"
