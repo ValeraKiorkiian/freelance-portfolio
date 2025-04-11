@@ -180,18 +180,26 @@
 }
 
 #accordion-about .ac .ac-text {
-  color: transparent;
+  font-family: Inter Tight;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    visibility: hidden;
+    color: var(--white);
+    transition-delay: 0.3s;
 }
 
 #accordion-about .ac.is-active .ac-text {
   padding: 0;
-  font-family: Inter Tight;
+  /* font-family: Inter Tight;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.02em; */
   background: var(--background);
   color: var(--white);
+  visibility: visible;
 }
 
 #accordion-about .ac:first-child .ac-panel .ac-text:first-child {
